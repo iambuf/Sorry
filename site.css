@@ -30,7 +30,10 @@ section {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    background: linear-gradient(45deg, rgba(255, 107, 107, 0.8), rgba(255, 142, 142, 0.8)),
+            url('IMG-20240222-WA0009.jpg');
+background-size: cover;
+background-position: center;
     color: white;
 }
 
