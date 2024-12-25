@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry Ziya-e-Shams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- First Section - Main Sorry -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="main-sorry" data-aos="zoom-in">
+                <span class="sorry-text">I'm Sorry</span>
+                <span class="name-text">Ziya-e-Shams 💕</span>
+            </h1>
+            <div class="sorry-emoji" data-aos="flip-up">
+                🥺
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Section - Emotional Apology -->
+    <section class="emotional">
+        <div class="container" data-aos="fade-up">
+            <div class="emoji-container">😔</div>
+            <h2>From the Bottom of My Heart</h2>
+            <p>I know I made a mistake, and seeing you upset breaks my heart. Your smile means everything to me, and I'd do anything to bring it back.</p>
+        </div>
+    </section>
+
+    <!-- Third Section - Promise -->
+    <section class="promise">
+        <div class="container" data-aos="fade-right">
+            <div class="emoji-container">🤝</div>
+            <h2>My Promise to You</h2>
+            <div class="promise-list">
+                <div class="promise-item" data-aos="fade-up" data-aos-delay="100">❤️ I'll be more understanding</div>
+                <div class="promise-item" data-aos="fade-up" data-aos-delay="200">❤️ I'll communicate better</div>
+                <div class="promise-item" data-aos="fade-up" data-aos-delay="300">❤️ I'll always be there for you</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fourth Section - Memory -->
+    <section class="memory">
+        <div class="container" data-aos="fade-left">
+            <div class="emoji-container">🌟</div>
+            <h2>Remember Our Beautiful Moments</h2>
+            <div class="memory-cards">
+                <div class="memory-card" data-aos="flip-left" data-aos-delay="100">
+                    💖 Our Special Times
+                </div>
+                <div class="memory-card" data-aos="flip-left" data-aos-delay="200">
+                    💝 Our Laughter
+                </div>
+                <div class="memory-card" data-aos="flip-left" data-aos-delay="300">
+                    💓 Our Journey Together
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fifth Section - Final Appeal -->
+    <section class="final">
+        <div class="container" data-aos="zoom-in">
+            <div class="emoji-container">🙏</div>
+            <h2>Please Forgive Me</h2>
+            <p>You are my world, my everything. I promise to make it up to you and be the better person you deserve.</p>
+            <div class="final-emojis" data-aos="bounce">
+                💕 🌹 💖
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: false,
+                mirror: true
+            });
+        });
+
+        // Floating hearts
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'floating-heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            document.getElementById('floatingHearts').appendChild(heart);
+            
+            heart.addEventListener('animationend', () => {
+                heart.remove();
+            });
+        }
+
+        setInterval(createFloatingHeart, 1000);
+    </script>
+</body>
+</html>
